@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://kit.fontawesome.com/4a29497d20.js" crossorigin="anonymous"></script>
     <title>inecimitate</title>
   </head>
   <body>
@@ -17,30 +17,37 @@
         <div class="left-control">
         <div class="left">
           <div class="device">
-            <p>Device Configuration</p>
-            <label>PU Code</label>
-            <p>07-13-08-036</p>
+          <div class="device-head">  <i class="fa-solid fa-gear"></i> <p>Device Configuration</p><i class="fa-sharp fa-solid fa-square-check"></i></div>   
+            <div class="hor"></div>
+            <div id="uniqueP"> <p>PU Code <span>07-13-08-036   :0</span></p></div>
+           
           </div>
           <div class="registered-voters">
             <div class="amount-registered">
+                <i class="fa-solid fa-coins" id="icons"></i>
               <h3>447</h3>
             </div>
-            <h3>Registered Voters</h3>
-            <p>Voters registered under this Polling Unit</p>
-          </div>
-          <div class="agredited-voters">
-            <div class="amount-accredited">
-              <h3>143</h3>
+            <div class="registered">
+                <h3>Registered Voters</h3>
+                <p>Voters registered under this Polling Unit</p>
             </div>
-            <h3>Accredited Voters</h3>
-            <p>Voters accredited under this Polling Unit</p>
+           
+          </div>
+          <div class="accredited-voters">
+            <div class="amount-accredited">
+            <i class="fa-solid fa-user-check" id="icons"></i>
+            <h3>143</h3>
+            </div>
+            <div class="accredited">
+               <h3>Accredited Voters</h3>
+              <p>Voters accredited under this Polling Unit</p></div>
           </div>
         </div>
         </div>
         <div class="right-control">
         <div class="right">
-          <label>Voter Accreditation</label>
           <form>
+            <label id="right-head">Voter Accreditation</label>
             <input type="text" placeholder="Enter Voter Last Name" />
            <label>or</label>
             <input type="text" placeholder="Enter last six digits of VIN" />
@@ -49,6 +56,5 @@
         </div>
     </div>
       </div>
-    
   </body>
 </html>
