@@ -26,14 +26,11 @@ text-transform: uppercase;
 img{
     width: 90px;
 }
-.left-control{
-    margin: 50px;
+.left{
     width: 100%;
     max-width: 480px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-}
-.left{
-    
+    margin: 30px auto;
+    padding: 40px;  
 }
 
 .right-control{
@@ -41,6 +38,10 @@ img{
     width: 100%;
     max-width: 480px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);  
+}
+#right-head{
+    font-size: 20px;
+    margin-bottom: 29px;
 }
 .right{
     width: 100%;
@@ -52,5 +53,91 @@ img{
 .right form{
     display: flex;
     flex-direction: column; 
-    text-align: center; 
+    text-align: center;
+    line-height: 60px; 
+}
+.right form input{
+    font-size: 20px;
+    border: 1px solid green;
+    outline: none;
+    padding: 12px;
+}
+button{
+    border: none;
+    margin: 20px;
+    margin-top: 2rem;
+    width: 150px;
+    padding: 15px;
+    background-color: green;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.hor{
+    border-top: 1px solid black;
+}
+.device{
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);  
+    margin-bottom: 1rem;   
+}
+.registered-voters{
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); 
+    margin-bottom: 1rem;
+}
+.registered{
+    margin-left: 15px;
+}
+.accredited{
+    margin-left: 15px;
+}
+#icons{
+    font-size: 2.5rem;
+}
+.accredited-voters{
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); 
+}
+.amount-registered{
+    display: flex;
+    flex-direction: column;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 1px solid green;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+.device-head{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.device-head i{
+    margin-top: 1rem;
+    margin-left: 45px;
+    margin-right: 25px;
+    color: green;
+}
+.device #uniqueP{
+    margin-left: 30px;
+    padding: 12px;
+}
+.device #uniqueP span{
+    color: green;
+    font-weight: 700;
+}
+.amount-accredited{
+    display: flex;
+    flex-direction: column;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 1px solid green;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    color: green;
 }
