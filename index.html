@@ -8,7 +8,7 @@
     <title>inecimitate</title>
   </head>
   <body>
-    
+    <main>
       <div class="headins">
         <h1>inecimitate</h1>
         <img src="./ineclogo.jpg" alt="inec logo">
@@ -36,7 +36,7 @@
           <div class="accredited-voters">
             <div class="amount-accredited">
             <i class="fa-solid fa-user-check" id="icons"></i>
-            <h3>143</h3>
+            <div class="number-accredited"></div>
             </div>
             <div class="accredited">
                <h3>Accredited Voters</h3>
@@ -46,15 +46,19 @@
         </div>
         <div class="right-control">
         <div class="right">
-          <form>
+          <form id="form">
             <label id="right-head">Voter Accreditation</label>
-            <input type="text" placeholder="Enter Voter Last Name" />
+            <input id="name" type="text" placeholder="Enter Voter Last Name" />
            <label>or</label>
-            <input type="text" placeholder="Enter last six digits of VIN" />
-            <button>ACCREDITATION</button>
+            <input id="vin" type="text" placeholder="Enter last six digits of VIN" />
+            <button type="submit" id="button">ACCREDITATION</button>
           </form>
         </div>
     </div>
+  </main>
+    <div class="display">
+    </div>
       </div>
+      <script src="./app.js"></script>
   </body>
 </html>
