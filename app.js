@@ -37,8 +37,8 @@ let accreditedVoters =[
         id: 'b3'
     },
     {
-        firstname: 'Usman',
-        lastname: 'Joel',
+        firstname: 'Tom',
+        lastname: 'Monji',
         vin: '120050',
         id: 'c1'
     },
@@ -62,50 +62,60 @@ let accreditedVoters =[
     }
 ];
 
-const numberAccredited = document.querySelector('.number-accredited');
 const button = document.querySelector('#button');
-const form = document.querySelector('#form');
-const test = document.querySelector('.test');
-const confirmbtn = document.querySelector('#confirm');
 const main = document.querySelector('main');
 const displayer = document.querySelector('.display');
 const increaseAccred = document.querySelector('.number-accredited');
-
-
-
+let listAccredited = [];
 button.addEventListener('click', (e) => {
  e.preventDefault();
-let userName = document.querySelector('#name').value;
-let userVin = document.querySelector('#vin').value;
+let userName = document.querySelector('.name').value;
+let userNameValid = document.querySelector('.name');
+let userVin = document.querySelector('.vin').value;
+let userVinValid = document.querySelector('.vin');
 const found = accreditedVoters.filter(item =>{
-    if(userName.trim() === item.lastname || userVin.trim() === item.vin){
-        console.log('found');
-      return userName||userVin;
-    } else{
-        console.log('notin');
-        return;
-    }
-    
+return item.lastname === userName || item.vin === userVin
 });
-
+if(found.length === 0 || found[0].lastname === listAccredited){
+   userNameValid.classList.add('active');
+   userVinValid.classList.add('active');
+  setTimeout(()=>{ userNameValid.classList.remove('active')|| userVinValid.classList.remove('active')}, 1000)
+}
+else{
+listAccredited.push(found);
 main.classList.toggle('active');
 displayer.classList.toggle('active');
 
 displayer.innerHTML = `<div class="display-control">
-<img src="./userimg.png" alt="voters passport">
+<img id="userImg" src="./userimg.png" alt="voters passport">
 <br>
-<label>Firstname:</label>
+<label>Firstname</label>
 <h3>${found[0].firstname}</h3>
-<label>Lastname:</label>
+<label>Lastname</label>
 <h3>${found[0].lastname}</h3>
-<label>Voters Identification Number (VIN):</label>
+<label>Voters Identification Number (VIN)</label>
 <h3>${found[0].vin}</h3>
 
-<button id="confirm">VERIFY</button>
+<button class="btn" >VERIFY</button>
 </div>
 `;
-
+}
 document.forms[0].reset();
 });
-let validations = 0;
 
+let validations = 0;
+increaseAccred.innerHTML= `<h3>${validations}</h3>`
+
+document.querySelector('.display').addEventListener('click', (e) =>{
+    target = e.target;
+   if(target.classList.contains('btn')){
+       displayer.classList.toggle('active');   
+       main.classList.toggle('active');
+    }
+    const testin = listAccredited.filter(exist => {
+        return exist;
+    });
+    console.log(testin);
+    validations++;
+    increaseAccred.innerHTML= `<h3>${validations}</h3>` 
+});

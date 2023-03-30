@@ -8,6 +8,13 @@
     <title>inecimitate</title>
   </head>
   <body>
+    <script>
+      function isValue(){
+        if (InputEvent.length === 0){
+          return false;
+        }
+      }
+    </script>
     <main>
       <div class="headins">
         <h1>inecimitate</h1>
@@ -48,9 +55,9 @@
         <div class="right">
           <form id="form">
             <label id="right-head">Voter Accreditation</label>
-            <input id="name" type="text" placeholder="Enter Voter Last Name" />
+            <input class="name" type="text" placeholder="Enter Voter Last Name" />
            <label>or</label>
-            <input id="vin" type="text" placeholder="Enter last six digits of VIN" />
+            <input class="vin" type="text" placeholder="Enter last six digits of VIN"/>
             <button type="submit" id="button">ACCREDITATION</button>
           </form>
         </div>

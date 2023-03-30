@@ -146,6 +146,12 @@ main.active{
     pointer-events: none;
     user-select: none;
 }
+.name.active{
+    border: 2px solid red;
+}
+.vin.active{
+    border: 2px solid red;
+}
 .display{
     position: fixed;
     top: 40%;
@@ -164,4 +170,7 @@ main.active{
     visibility: visible;
     opacity: 1;
     transform: 0.5s;
+}
+#userImg{
+    border: 1px solid green;
 }
