@@ -113,7 +113,11 @@ document.querySelector('.display').addEventListener('click', (e) =>{
        main.classList.toggle('active');
     }
     const testin = listAccredited.filter(exist => {
-        return exist;
+        if(exist === listAccredited){
+         console.log('e don dey')
+        } else{
+            return exist;
+        }
     });
     console.log(testin);
     validations++;
