@@ -76,13 +76,15 @@ let userVinValid = document.querySelector('.vin');
 const found = accreditedVoters.filter(item =>{
 return item.lastname === userName || item.vin === userVin
 });
-if(found.length === 0 || found[0].lastname === listAccredited){
+
+if(found.length === 0 ){
    userNameValid.classList.add('active');
    userVinValid.classList.add('active');
   setTimeout(()=>{ userNameValid.classList.remove('active')|| userVinValid.classList.remove('active')}, 1000)
 }
 else{
-listAccredited.push(found);
+
+
 main.classList.toggle('active');
 displayer.classList.toggle('active');
 
@@ -107,6 +109,7 @@ let validations = 0;
 increaseAccred.innerHTML= `<h3>${validations}</h3>`
 
 document.querySelector('.display').addEventListener('click', (e) =>{
+   
     target = e.target;
    if(target.classList.contains('btn')){
        displayer.classList.toggle('active');   
